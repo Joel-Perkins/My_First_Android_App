@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">My First App01-es</string>
+    <string name="edit_message">Enter a message-es</string>
+    <string name="button_send">Send-es</string>
+    <string name="action_settings">Settings-es</string>
+    <string name="title_activity_main">MainActivity-es</string>
+    <string name="title_activity_display_message">My Message-es</string>
+    <string name="hello_world">Hello world!-es</string>
+
+    <string name="action_search">Search-es</string>
+
+
+</resources>

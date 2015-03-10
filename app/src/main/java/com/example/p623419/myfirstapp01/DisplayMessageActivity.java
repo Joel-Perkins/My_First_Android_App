@@ -1,5 +1,6 @@
 package com.example.p623419.myfirstapp01;
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
@@ -10,9 +11,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.util.Log;
 
 
 public class DisplayMessageActivity extends ActionBarActivity {
+
+    public final static String FILTER_TAG = "AppFilter";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -29,10 +33,12 @@ public class DisplayMessageActivity extends ActionBarActivity {
 
         // Set the text view as the activity layout
         setContentView(textView);
+        Log.i(FILTER_TAG, "MessageActivity - onCreate");
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        Log.i(FILTER_TAG, "MessageActivity - onOptionsItemSelected");
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
@@ -47,7 +53,6 @@ public class DisplayMessageActivity extends ActionBarActivity {
      * A placeholder fragment containing a simple view.
      */
     public static class PlaceholderFragment extends Fragment {
-
         public PlaceholderFragment() { }
 
         @Override
@@ -56,5 +61,60 @@ public class DisplayMessageActivity extends ActionBarActivity {
             View rootView = inflater.inflate(R.layout.activity_display_message,container, false);
             return rootView;
         }
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.i(FILTER_TAG, "MessageActivity - onStart");
+    }
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.i(FILTER_TAG, "MessageActivity - onResume");
+    }
+
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.i(FILTER_TAG, "MessageActivity - onPause");
+    }
+
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.i(FILTER_TAG, "MessageActivity - onStop");
+    }
+
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.i(FILTER_TAG, "MessageActivity - onRestart");
+    }
+
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.i(FILTER_TAG, "MessageActivity - onDestroy");
+    }
+
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Log.i(FILTER_TAG, "MessageActivity - onSaveInstanceState");
+    }
+
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        Log.i(FILTER_TAG, "MessageActivity - onRestoreInstanceState");
     }
 }

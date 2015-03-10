@@ -6,7 +6,8 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/CustomActionBarTheme"
+        >
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
@@ -16,6 +17,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".DisplayMessageActivity"
             android:label="@string/title_activity_display_message"
@@ -23,12 +25,6 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.p623419.myfirstapp01.MainActivity" />
-        </activity>
-
-        <activity
-            android:name="com.example.p623419.myfirstapp01.DisplayMessageActivity"
-            android:label="@string/title_activity_display_message"
-            android:parentActivityName="com.example.p623419.myfirstapp01.MainActivity" >
         </activity>
 
     </application>
